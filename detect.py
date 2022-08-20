@@ -193,6 +193,3 @@ if __name__ == '__main__':
                 strip_optimizer(opt.weights)
         else:
             detect()
-
-# command
-# python detect.py --source "../datas/original_images/test_1" --weight yolov7.pt --device 0 --classes 0 --save-txt True
