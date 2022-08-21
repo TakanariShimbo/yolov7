@@ -195,4 +195,4 @@ if __name__ == '__main__':
             detect()
 
 # command
-# python detect.py --source "../datas/original_images/test_1" --weight yolov7.pt --device 0 --classes 0 --save-txt True
+# python detect.py --source "../datas/original_images/test_1" --weights yolov7.pt --device 0 --classes 0 --save-txt --project "../datas/humans_bbox" --name test_1
