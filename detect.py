@@ -197,4 +197,4 @@ if __name__ == '__main__':
             detect()
 
     # ex)
-    # python detect.py --save-txt --device 0 --classes 0 --weights "yolov7.pt" --source "../datas/original_images/test_1" --project "../datas/humans_bbox" --name "test_1"
+    # python detect.py --save-txt --device 0 --classes 0 --weights "models_checkpoint/yolov7.pt" --source "../datas/original_images/test_1" --project "../datas/humans_bbox" --name "test_1"
