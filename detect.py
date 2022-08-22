@@ -163,6 +163,7 @@ def detect(save_img=False):
 
 
 if __name__ == '__main__':
+    # get args
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', nargs='+', type=str, default='yolov7.pt', help='model.pt path(s)')
     parser.add_argument('--source', type=str, default='inference/images', help='source')  # file/folder, 0 for webcam
@@ -186,6 +187,7 @@ if __name__ == '__main__':
     print(opt)
     #check_requirements(exclude=('pycocotools', 'thop'))
 
+    # run detect
     with torch.no_grad():
         if opt.update:  # update all models (to fix SourceChangeWarning)
             for opt.weights in ['yolov7.pt']:
@@ -194,5 +196,5 @@ if __name__ == '__main__':
         else:
             detect()
 
-# command
-# python detect.py --save-txt --device 0 --classes 0 --weights "yolov7.pt" --source "../datas/original_images/test_1" --project "../datas/humans_bbox" --name "test_1"
+    # ex)
+    # python detect.py --save-txt --device 0 --classes 0 --weights "yolov7.pt" --source "../datas/original_images/test_1" --project "../datas/humans_bbox" --name "test_1"
